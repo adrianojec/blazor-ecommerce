@@ -1,6 +1,11 @@
-﻿global using BlazorECommerce.Server.Data;
+﻿global using BlazorECommerce.Server.Commands.Products;
+global using BlazorECommerce.Server.Commands.Products.Interfaces;
+global using BlazorECommerce.Server.Data;
+global using BlazorECommerce.Shared.Core;
 global using BlazorECommerce.Shared.Models;
 global using Microsoft.EntityFrameworkCore;
+
+using BlazorECommerce.Server.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +16,8 @@ builder.Services.AddDbContext<DataContext>(opt =>
 {
    opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddCommandServices();
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();

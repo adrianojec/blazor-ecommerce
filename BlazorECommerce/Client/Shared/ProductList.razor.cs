@@ -1,4 +1,5 @@
 ﻿using System.Net.Http.Json;
+using BlazorECommerce.Shared.Core;
 using BlazorECommerce.Shared.Models;
 
 namespace BlazorECommerce.Client.Shared
@@ -9,9 +10,9 @@ namespace BlazorECommerce.Client.Shared
 
       protected override async Task OnInitializedAsync()
       {
-         var result = await Http.GetFromJsonAsync<List<Product>>("api/Products");
-         if (result != null)
-            Products = result;
+         var result = await Http.GetFromJsonAsync<Result<List<Product>>>("api/Products");
+         if (result != null && result.Value != null)
+            Products = result.Value;
       }
    }
 }

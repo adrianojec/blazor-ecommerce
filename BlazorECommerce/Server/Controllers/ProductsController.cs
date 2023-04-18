@@ -6,16 +6,19 @@ namespace Server.Controllers
    [Route("api/[controller]")]
    public class ProductsController : ControllerBase
    {
-      private readonly DataContext _context;
-      public ProductsController(DataContext context)
+      private readonly IGetProductsCommand _getProductsCommand;
+      public ProductsController(IGetProductsCommand getProductsCommand)
       {
-         _context = context;
+         _getProductsCommand = getProductsCommand;
       }
 
       [HttpGet]
-      public async Task<ActionResult<List<Product>>> GetAll()
+      public async Task<ActionResult<Result<List<Product>>>> GetAll()
       {
-         var products = await _context.Products.ToListAsync();
+         var products = await _getProductsCommand.ExecuteCommand();
+
+         if (!products.isSuccess) return BadRequest(products.Error);
+
          return Ok(products);
       }
    }
