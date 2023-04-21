@@ -1,4 +1,4 @@
-﻿namespace BlazorECommerce.Client.Shared
+﻿namespace BlazorECommerce.Client.Shared.ProductList
 {
    public partial class ProductList
    {
