@@ -1,3 +1,6 @@
+using BlazorECommerce.Shared.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace BlazorECommerce.Server.Data
 {
    public class DataContext : DbContext

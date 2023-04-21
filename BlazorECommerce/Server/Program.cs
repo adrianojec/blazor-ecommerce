@@ -1,11 +1,6 @@
-﻿global using BlazorECommerce.Server.Commands.Products;
-global using BlazorECommerce.Server.Commands.Products.Interfaces;
-global using BlazorECommerce.Server.Data;
-global using BlazorECommerce.Shared.Core;
-global using BlazorECommerce.Shared.Models;
-global using Microsoft.EntityFrameworkCore;
-
+﻿using BlazorECommerce.Server.Data;
 using BlazorECommerce.Server.Extensions;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,3 +1,7 @@
+using BlazorECommerce.Server.Commands.Products.Interfaces;
+using BlazorECommerce.Shared.Core;
+using BlazorECommerce.Shared.Models;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace Server.Controllers
