@@ -1,5 +1,5 @@
-﻿using BlazorECommerce.Server.Data;
-using BlazorECommerce.Server.Extensions;
+﻿using BlazorECommerce.Server.API.Extensions;
+using BlazorECommerce.Server.Persistence.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

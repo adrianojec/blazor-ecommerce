@@ -1,10 +1,10 @@
-using BlazorECommerce.Server.Commands.Products.Interfaces;
-using BlazorECommerce.Server.Data;
+using BlazorECommerce.Server.Application.Commands.Products.Interfaces;
+using BlazorECommerce.Server.Persistence.Data;
 using BlazorECommerce.Shared.Core;
 using BlazorECommerce.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlazorECommerce.Server.Commands.Products;
+namespace BlazorECommerce.Server.Application.Commands.Products;
 
 public class GetProductsCommand : IGetProductsCommand
 {

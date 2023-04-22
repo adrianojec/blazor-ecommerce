@@ -1,7 +1,7 @@
 using BlazorECommerce.Shared.Core;
 using BlazorECommerce.Shared.Models;
 
-namespace BlazorECommerce.Server.Commands.Products.Interfaces;
+namespace BlazorECommerce.Server.Application.Commands.Products.Interfaces;
 
 public interface IGetProductsCommand
 {

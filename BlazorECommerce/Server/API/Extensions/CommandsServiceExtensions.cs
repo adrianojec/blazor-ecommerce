@@ -1,7 +1,7 @@
-using BlazorECommerce.Server.Commands.Products;
-using BlazorECommerce.Server.Commands.Products.Interfaces;
+using BlazorECommerce.Server.Application.Commands.Products;
+using BlazorECommerce.Server.Application.Commands.Products.Interfaces;
 
-namespace BlazorECommerce.Server.Extensions;
+namespace BlazorECommerce.Server.API.Extensions;
 
 public static class CommandsServiceExtensions
 {
