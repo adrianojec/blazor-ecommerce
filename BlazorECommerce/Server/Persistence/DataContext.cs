@@ -1,9 +1,10 @@
+using BlazorECommerce.Server.Application.Context;
 using BlazorECommerce.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlazorECommerce.Server.Persistence.Data
+namespace BlazorECommerce.Server.Persistence
 {
-   public class DataContext : DbContext
+   public class DataContext : DbContext, IDataContext
    {
       public DataContext(DbContextOptions<DataContext> options) : base(options)
       {
