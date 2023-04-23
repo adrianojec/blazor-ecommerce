@@ -4,6 +4,6 @@ namespace BlazorECommerce.Client.Services.Products.Interfaces;
 
 public interface IProductService
 {
-   List<Product> Products { get; set; }
-   Task GetAll();
+   Task<List<Product>> GetAll();
+   Task<Product> GetById(int id);
 }

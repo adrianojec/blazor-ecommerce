@@ -1,17 +1,17 @@
 ﻿@inject IProductService ProductService;
 
-@if (ProductService.Products == null || ProductService.Products.Count == 0)
+@if (Products == null || Products.Count == 0)
 {
-    <div>Loading products...</div>
+    <div>@message</div>
 }
 else
 {
     <ul class="list-unstyled">
-    @foreach (var product in ProductService.Products)
+    @foreach (var product in Products)
         {
             <li class="media my-3">
                 <div class="media-img-wrapper me-2">
-                    <a href="#">
+                    <a href="/products/@product.Id">
                         <img class="media-img" src="@product.ImageUrl" alt="@product.Title" />
                     </a>
                 </div>
